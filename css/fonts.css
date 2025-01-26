@@ -8,8 +8,8 @@
 
 /* O si tienes tus fuentes locales, puedes declararlas de esta manera */
 @font-face {
-    font-family: 'MiFuentePersonalizada';
-    src: url('fonts/MiFuentePersonalizada-Regular.ttf') format('truetype');
+    font-family: 'regularpoppins';
+    src: url('/fonts/Poppins-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
