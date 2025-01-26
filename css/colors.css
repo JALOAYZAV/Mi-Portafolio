@@ -1,0 +1,10 @@
+/* color.css */
+
+/* Definir colores en variables */
+:root {
+    --color-fondo: #ffffff; /* Blanco */
+    --color-texto: #333333; /* Gris oscuro */
+    --color-enlace: #1e90ff; /* Azul brillante */
+    --color-titulo: #f1c40f; /* Dorado */
+    --color-boton: #2ecc71; /* Verde esmeralda */
+}

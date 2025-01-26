@@ -1,27 +1,27 @@
 @import "./fonts.css";
-@import "./common.css";
+@import "./reset.css";
 @import "./colors.css";
 
 
 
 header h1{
-    color: var(--harvest-gold);
+    color: var(--color-fondo);
 }
 
 header h2{
-    color: var(--cream);
+    color: var(--color-texto);
 }
 
 header h3{
-    color: var(--cerulean);
+    color: var(--color-enlace);
 }
 
 header h4{
-    color: var(--indigo) !important;
+    color: var(--color-titulo) !important;
     font-size: 50px;
 }
 
 header h5{
-    color: var(--oxford) !important;
+    color: var(--color-boton) !important;
     font-size: 50px;
 }
