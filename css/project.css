@@ -1,0 +1,81 @@
+/* Estilos generales para la sección "Proyectos" */
+#project {
+  background-color: rgba(255, 255, 255, .4) ; /* Blanco */
+  padding: 100px 200px;
+  margin: 200px auto;
+  width: auto;
+  height: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  .project-img{
+    width: 100%; /* Se ajusta al ancho del contenedor */
+    height: 200px; /* Altura fija para mantener consistencia */
+    object-fit: cover; /* Recorta y escala la imagen para llenar el contenedor */
+    border-radius: 8px; /* Opcional: esquinas redondeadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: sombra para estilo */
+
+  }
+  
+  /* Título de la sección */
+  #project h2 {
+    font-size: 2.2rem;
+    color: var(--color-titulo); /* Dorado */
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  /* Cuadrícula de proyectos */
+  .project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Cuatro columnas */
+    gap: 30px;
+  }
+  
+  /* Estilo para cada bloque de proyecto */
+  .project {
+    background-color: var(--clr-white); /* Fondo blanco para cada bloque */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Título dentro de cada bloque de proyecto */
+  .project h3 {
+    font-size: 1.8rem;
+    color: var(--color-enlace); /* Azul brillante */
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  /* Estilo para la descripción de los proyectos */
+  .project p {
+    font-size: 1.1rem;
+    color: var(--color-texto); /* Gris oscuro */
+    line-height: 1.6;
+  }
+  
+  /* Respuesta para pantallas pequeñas */
+  @media (max-width: 768px) {
+    #project {
+      padding: 20px 10px;
+    }
+  
+    #project h2 {
+      font-size: 1.8rem;
+    }
+  
+    .project-grid {
+      grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas pequeñas */
+    }
+  
+    .project h3 {
+      font-size: 1.5rem;
+    }
+  
+    .project p {
+      font-size: 1rem;
+    }
+  }
+  

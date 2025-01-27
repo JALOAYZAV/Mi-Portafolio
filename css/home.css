@@ -1,27 +1,184 @@
-/* Estilos para el video de fondo */
-.video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* Estilo general para la sección hero */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden; /* Evita desplazamiento extra */
+  position: relative;
+  z-index: 10001;
+}
+
+/* Fondo de video */
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  min-width: 100%; /* Cubre el ancho */
+  min-height: 100%; /* Cubre la altura */
+  object-fit: cover; /* Evita distorsiones */
+  z-index: -1;
+  filter: brightness(70%); /* Ajusta la oscuridad para resaltar el texto */
+}
+
+/* Contenido del hero */
+.hero-content {
+  z-index: 1; /* Asegura que el contenido esté por encima del video */
+  width: 1000px;
+  height: 500px; /* Limita el ancho máximo del contenido */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro con transparencia */
+  border-radius: 10px; /* Bordes suaves */
+  color: var(--clr-white); /* Blanco */
+  text-align: center;
+  animation: fadeIn 1s ease-in-out; /* Agregar animación */
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Título */
+/* Estilo para el h1 */
+.title h1 {
+  font-size: 4rem;
+  margin-bottom: 100px;
+  color: var(--color-titulo); /* Usa el color dorado definido */
+  text-decoration: none; /* Sin subrayado */
+  white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+  overflow: hidden; /* Oculta el texto extra */
+  border-right: 0.15em solid var(--color-titulo); /* Simula el cursor de escritura */
+  width: 0; /* Inicialmente el ancho es 0 */
+  animation: typing 4s steps(40) 1s 1 normal both, blink 0.75s step-end infinite; /* Animaciones */
+}
+
+/* Animación de "escritura" */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
     width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1; /* Asegura que el video esté detrás del contenido */
   }
-  
-  #bg-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Hace que el video cubra toda la pantalla */
+}
+
+/* Animación del cursor (parpadeo) */
+@keyframes blink {
+  50% {
+    border-color: transparent; /* El cursor se oculta en la mitad del ciclo */
   }
-  
-  /* Estilos para el contenido sobre el video */
-  .content {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    color: white;
-    padding: 50px;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro para que el texto sea legible */
-  }
-  
+}
+
+
+
+/* Texto descriptivo */
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: blanchedalmond; /* Gris oscuro */
+}
+
+/* Botones */
+/* Botones generales */
+.btn1 .btn2{
+  display: inline-flex;
+  align-items: center; /* Centra iconos y texto verticalmente */
+  justify-content: space-between; /* Alineación horizontal */
+  margin: 50px;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Transición suave */
+}
+
+.cta-buttons{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+/* Efecto hover */
+.btn:hover {
+  background-color: var(--clr-neon); /* Color neon para hover */
+  box-shadow: 0 0 12px var(--clr-neon); /* Sombra que resalta el botón */
+}
+
+/* Botón con borde y animación */
+.button {
+  font-size: 1em;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--clr-neon); /* Neon */
+  border: 4px solid var(--clr-neon); /* Neon */
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+  text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.55), 0 0 0.5em currentColor;
+  box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+  position: relative;
+  transition: color 0.3s ease, transform 0.5s linear;
+}
+
+.button::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  background: var(--clr-neon);
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: perspective(1.2em) rotateX(40deg) scale(1.5, 0.5);
+  filter: blur(1.15em);
+  opacity: 0.7;
+  transition: transform 0.5s linear;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 4em 0.6em var(--clr-neon), 0 0 1em 0.2em var(--clr-white);
+  opacity: 0;
+  background: var(--clr-neon);
+  z-index: -1;
+  transition: opacity 0.5s linear;
+}
+
+.button:hover,
+.button:focus {
+  color: var(--clr-bg); /* Fondo oscuro */
+  text-shadow: none;
+}
+
+.button:hover::before,
+.button:focus::before {
+  opacity: 1;
+  transform: perspective(1em) rotateX(40deg) scale(1.5, 0.6);
+}
+
+.button:hover::after,
+.button:focus::after {
+  opacity: 1;
+}

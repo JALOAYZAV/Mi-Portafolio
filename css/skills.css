@@ -1,0 +1,78 @@
+/* Estilos generales para la sección "Habilidades" */
+#skills {
+  background-color: rgba(255, 255, 255, .2) ; /* Blanco */
+  padding: 100px 200px;
+  margin: 200px auto;
+  width: auto;
+  height: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Título de la sección */
+#skills h2 {
+  font-size: 2.2rem;
+  color: var(--color-titulo); /* Dorado */
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Estilos para la cuadrícula de habilidades */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas */
+  gap: 40px; /* Espaciado entre columnas */
+}
+
+/* Estilo para cada bloque de habilidad */
+.skill {
+  background-color: var(--clr-white); /* Fondo blanco para cada bloque */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Título dentro de cada bloque de habilidad */
+.skill h3 {
+  font-size: 1.8rem;
+  color: var(--color-enlace); /* Azul brillante */
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Estilo para las listas de habilidades */
+.skill ul {
+  list-style-type: none; /* Eliminar los puntos */
+  padding-left: 0;
+}
+
+/* Estilo para cada elemento de la lista */
+.skill li {
+  font-size: 1.1rem;
+  color: var(--color-texto); /* Gris oscuro */
+  margin-bottom: 8px;
+}
+
+/* Respuesta para pantallas pequeñas */
+@media (max-width: 768px) {
+  #skills {
+    padding: 20px 10px;
+  }
+
+  #skills h2 {
+    font-size: 1.8rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+  }
+
+  .skill h3 {
+    font-size: 1.5rem;
+  }
+
+  .skill li {
+    font-size: 1rem;
+  }
+}

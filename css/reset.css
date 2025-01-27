@@ -7,11 +7,14 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}  
+
 body {
     font-family: 'Arial', sans-serif;
     font-size: 1rem;
     line-height: 1.5;
-    color: blue;
 }
 
 /* Contenedor fluido */

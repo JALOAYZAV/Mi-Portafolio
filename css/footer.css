@@ -1,0 +1,68 @@
+/* Footer general */
+footer {
+    background-color: #333; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 60px 10px; /* Espaciado */
+    text-align: center; /* Centrado del contenido */
+}
+
+/* Contenedor del footer */
+.footer-container {
+    display: flex;
+    flex-direction: column; /* Ordena en columna en pantallas pequeñas */
+    align-items: center;
+    gap: 15px; /* Espaciado entre bloques */
+    border-bottom: 1px solid #fff;
+}
+
+/* Enlaces del footer */
+.footer-links {
+    list-style: none; /* Quita los puntos de la lista */
+    display: flex;
+    gap: 20px; /* Espaciado entre enlaces */
+    padding: 0;
+    margin: 0;
+    
+}
+
+.footer-links li a {
+    text-decoration: none; /* Sin subrayado */
+    color: #fff; /* Texto blanco */
+    font-size: 1rem; /* Tamaño de fuente */
+    transition: color 0.3s ease; /* Animación al pasar el mouse */
+}
+
+.footer-links li a:hover {
+    color: #f1c40f; /* Color dorado al pasar el mouse */
+}
+
+/* Redes sociales */
+.social-media1 {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaciado entre íconos */
+    margin: 20px 0px;
+    width: 100%;
+  
+}
+
+.social-icon1 {
+    text-decoration: none; /* Sin subrayado */
+    color: #fff; /* Íconos blancos */
+    font-size: 1.2rem; /* Tamaño de los íconos */
+    display: flex;
+    align-items: center; /* Centra texto e íconos */
+    gap: 5px; /* Espaciado entre ícono y texto */
+    transition: color 0.3s ease;
+}
+
+.social-icon1:hover {
+    color: #1e90ff; /* Azul brillante al pasar el mouse */
+}
+
+/* Derechos de autor */
+.copyright {
+    margin-top: 10px; /* Separación respecto a los demás elementos */
+    font-size: 0.9rem; /* Tamaño más pequeño */
+    color: #aaa; /* Texto gris claro */
+}

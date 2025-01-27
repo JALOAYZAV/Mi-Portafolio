@@ -1,0 +1,50 @@
+/* Estilos generales para la sección "Sobre Mí" */
+#about {
+  background-color: rgba(255, 255, 255, .2) ; /* Blanco */
+  padding: 100px 200px;
+  margin: 200px auto;
+  width: auto;
+  height: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  
+}
+
+/* Título de la sección */
+#about h2 {
+  font-size: 2.2rem;
+  color: var(--color-titulo); /* Dorado */
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Párrafos dentro de la sección */
+#about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-texto); /* Gris oscuro */
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Estilos para los elementos destacados dentro de los párrafos */
+#about strong {
+  font-weight: 600;
+  color: var(--color-enlace); /* Azul brillante */
+}
+
+/* Respuesta para pantallas pequeñas */
+@media (max-width: 768px) {
+  #about {
+    padding: 20px 10px;
+  }
+
+  #about h2 {
+    font-size: 1.8rem;
+  }
+
+  #about p {
+    font-size: 1rem;
+  }
+}

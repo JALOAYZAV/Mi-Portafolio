@@ -1,0 +1,120 @@
+/* General del header */
+header {
+  position: fixed; /* Fija el header al tope de la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgb(25, 86, 177); /* Fondo negro con transparencia */
+  color: #fff;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre el ícono y el texto */
+  background-color: #064097;
+  height: 70px;
+  padding: 0 50px;
+  margin-left: -20px;
+}
+
+.logo img {
+  width: 40px; /* Tamaño del ícono */
+  height: auto; /* Mantén la proporción del ícono */
+}
+
+.logo a {
+  text-decoration: none;
+  color: #f1c40f; /* Color dorado */
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+/* Navbar (oculto inicialmente en móviles) */
+.navbar {
+  display: flex;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #1e90ff; /* Azul brillante al pasar el mouse */
+}
+
+/* Botón hamburguesa */
+.hamburger {
+  display: none; /* Por defecto, oculto en pantallas grandes */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Fuera de la pantalla */
+    width: 60%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo más oscuro */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: right 0.3s ease-in-out;
+  }
+
+  .navbar.active {
+    right: 0; /* Muestra el menú */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Coloca los enlaces en columna */
+  }
+
+  .hamburger {
+    display: flex; /* Muestra el botón en móviles */
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0; /* Esconde la barra del medio */
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}

@@ -1,0 +1,80 @@
+/* Estilo minimalista para la sección de Contacto */
+#contact {
+    background-color: #fff; /* Fondo blanco */
+    padding: 50px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  #contact h2 {
+    font-size: 2.5em;
+    color: #333; /* Título en gris oscuro */
+    margin-bottom: 10px;
+  }
+  
+  #contact p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px; /* Máximo tamaño de los formularios */
+    margin: 0 auto; /* Centrado */
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #1e90ff; /* Cambio de color del borde en focus */
+    outline: none;
+  }
+  
+  .contact-form button {
+    background-color: #1e90ff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .social-media {
+    margin-top: 30px;
+
+  }
+  
+  .social-media a {
+    font-size: 1.8em;
+    color: #333;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+    text-decoration: none; /* Elimina el subrayado */
+    border: none; /* Elimina cualquier borde */
+  }
+  
+  .social-media a:hover {
+    color: #1e90ff;
+  }
+  
