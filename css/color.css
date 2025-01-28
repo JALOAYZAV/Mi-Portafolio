@@ -1,0 +1,12 @@
+/* color.css */
+:root {
+    --color-fondo-principal: #F5F5F5;
+    --color-fondo-secundario: #FFFFFF;
+    --color-texto-principal: #333333;
+    --color-texto-secundario: #777777;
+    --color-enlaces: #2D9CDB;
+    --color-botones: #4F8A8B;
+    --color-titulo: #111111;
+    --color-sombra-fondo: rgba(0, 0, 0, 0.1);
+    --color-acento: #FF6F61;
+}

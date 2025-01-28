@@ -1,6 +1,14 @@
-@import "./fonts.css";
+@import "./font.css";
 @import "./reset.css";
-@import "./colors.css";
+@import "./color.css";
+@import "./home.css";
+@import "./header.css";
+@import "./about.css";
+@import "./skill.css";
+@import "./project.css";
+@import "./contact.css";
+@import "./footer.css";
+
 
 
 
