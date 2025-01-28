@@ -1,6 +1,6 @@
 /* Estilos generales para la sección "Sobre Mí" */
 #about {
-  background-color: rgba(255, 255, 255, .2) ; /* Blanco */
+  background-color: rgba(255, 255, 255, 1) ; /* Blanco */
   padding: 100px 200px;
   margin: 200px auto;
   width: auto;
@@ -18,6 +18,35 @@
   text-align: center;
   font-weight: 700;
 }
+
+.about-content{
+  background-color: #ffffff; /* Fondo base */
+  border-radius: 15px; /* Bordes redondeados */
+  padding: 50px;
+  box-shadow: 
+    inset 10px 10px 30px rgba(0, 0, 0, 0.2), /* Sombra oscura hacia adentro */
+    inset -10px -10px 30px rgba(255, 255, 255, 0.7); /* Sombra clara hacia adentro */
+  box-shadow: 
+    inset -10px -10px 30px rgba(0, 0, 0, 0.2), /* Sombra oscura hacia adentro */
+    inset 10px 10px 30px rgba(255, 255, 255, 0.7); /* Sombra clara hacia adentro */ 
+  text-align: center; /* Centra el contenido */
+  transition: all 0.3s ease; /* Animación suave */
+
+}
+
+.about-content:hover {
+  padding: 50px;
+  box-shadow: 
+  inset 5px 5px 15px rgba(0, 0, 0, 0.3), /* Sombras más suaves al pasar el mouse */
+  inset -5px -5px 15px rgba(255, 255, 255, 0.8);
+  box-shadow:
+  inset 5px 5px 15px rgba(0, 0, 0, 0.3), /* Sombras más suaves al pasar el mouse */
+  inset -5px -5px 15px rgba(255, 255, 255, 0.8);
+  transform: scale(1.02); /* Ligeramente más grande */
+
+  }
+  
+
 
 /* Párrafos dentro de la sección */
 #about p {

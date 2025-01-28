@@ -1,81 +1,148 @@
 /* Estilos generales para la sección "Proyectos" */
 #project {
-  background-color: rgba(255, 255, 255, .4) ; /* Blanco */
+  background-color: rgba(255, 255, 255, 1); /* Blanco */
   padding: 100px 200px;
   margin: 200px auto;
   width: auto;
   height: 800px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  }
-
-  .project-img{
-    width: 100%; /* Se ajusta al ancho del contenedor */
-    height: 200px; /* Altura fija para mantener consistencia */
-    object-fit: cover; /* Recorta y escala la imagen para llenar el contenedor */
-    border-radius: 8px; /* Opcional: esquinas redondeadas */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: sombra para estilo */
-
-  }
+}
+.project-img {
+  width: 100%; /* Se ajusta al ancho del contenedor */
+  height: 100%; /* Asegura que la imagen ocupe todo el contenedor */
+  object-fit: cover; /* Recorta y escala la imagen para llenar el contenedor */
+  z-index: 1; /* Asegura que la imagen quede detrás del título */
+}
+/* Título de la sección */
+#project h2 {
+  font-size: 2.2rem;
+  color: var(--color-titulo); /* Dorado */
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+/* Cuadrícula de proyectos */
+.project-grid {
+  position: relative;
+  height: 80%;
+  top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* Cuatro columnas */
+  gap: 30px;
+}
+/* Estilo para cada bloque de proyecto */
+.project {
+  background-color: var(--clr-white); /* Fondo blanco para cada bloque */
+  padding: 20px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  perspective: 1000px; /* Para habilitar la rotación 3D */
+  height: 100%;
+}
+/* Contenedor de la tarjeta del proyecto */
+.project-inner {
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+/* Rotación de la tarjeta solo al pasar el mouse sobre la imagen */
+.project-inner:hover {
+  transform: rotateY(180deg);
+}
+/* Parte frontal de la tarjeta (imagen + título) */
+.project-front {
+  height: 100%; /* Hace que ocupe toda la altura del contenedor .project */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-white);
+  backface-visibility: hidden;
+  padding: 0; /* Eliminar el padding para que ocupe todo el espacio */
+  box-sizing: border-box;
+  text-align:center;
+  background: url("/image/portafolio.webp") no-repeat center center / cover;
+}
+/* Título sobre la imagen */
+.project-front h3 {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: bold;
+  position: relative; /* Cambié a absolute */
+  left: 30%;
+  top: 20px;
+  transform: translate(-50%, -50%); /* Centrado absoluto */
+  z-index: 2; /* Asegura que el título esté por encima de la imagen */
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.7); /* Sombra al título dentro del bloque */
   
-  /* Título de la sección */
+}
+/* Parte trasera de la tarjeta (descripción y enlace) */
+.project-back {
+  position: absolute; /* Asegura que la parte trasera esté posicionada sobre la parte frontal */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: rgb(0, 0, 0); /* Color de texto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  transform: rotateY(180deg); /* Gira la parte trasera */
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  backface-visibility: hidden; /* Evita que la parte trasera sea visible cuando no está frente al espectador */
+  border: solid red; /* Esto es solo para depuración, puedes eliminarlo luego */
+  z-index: 2; /* Asegura que la parte trasera esté por encima de la parte frontal cuando está visible */
+}
+.project-back a {
+  color: var(--color-enlace);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 10;
+  pointer-events: auto; /* Asegura que los enlaces sean clicables */
+
+}
+.project-back a:hover {
+  text-decoration: underline;
+}
+/* Título dentro de cada bloque de proyecto */
+.project h3 {
+  font-size: 1.8rem;
+  color: var(--color-enlace); /* Azul brillante */
+  margin-bottom: 10px;
+}
+/* Estilo para la descripción de los proyectos */
+.project p {
+  font-size: 1.1rem;
+  color: var(--color-texto); /* Gris oscuro */
+  line-height: 1.6;
+  margin: 0; /* Para que el texto quede centrado sin márgenes extra */
+}
+/* Respuesta para pantallas pequeñas */
+@media (max-width: 768px) {
+  #project {
+    padding: 20px 10px;
+  }
+
   #project h2 {
-    font-size: 2.2rem;
-    color: var(--color-titulo); /* Dorado */
-    margin-bottom: 20px;
-    text-align: center;
-    font-weight: 700;
-  }
-  
-  /* Cuadrícula de proyectos */
-  .project-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; /* Cuatro columnas */
-    gap: 30px;
-  }
-  
-  /* Estilo para cada bloque de proyecto */
-  .project {
-    background-color: var(--clr-white); /* Fondo blanco para cada bloque */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Título dentro de cada bloque de proyecto */
-  .project h3 {
     font-size: 1.8rem;
-    color: var(--color-enlace); /* Azul brillante */
-    margin-bottom: 10px;
-    font-weight: 600;
   }
-  
-  /* Estilo para la descripción de los proyectos */
+
+  .project-grid {
+    grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas pequeñas */
+  }
+
+  .project h3 {
+    font-size: 1.5rem;
+  }
+
   .project p {
-    font-size: 1.1rem;
-    color: var(--color-texto); /* Gris oscuro */
-    line-height: 1.6;
+    font-size: 1rem;
   }
-  
-  /* Respuesta para pantallas pequeñas */
-  @media (max-width: 768px) {
-    #project {
-      padding: 20px 10px;
-    }
-  
-    #project h2 {
-      font-size: 1.8rem;
-    }
-  
-    .project-grid {
-      grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas pequeñas */
-    }
-  
-    .project h3 {
-      font-size: 1.5rem;
-    }
-  
-    .project p {
-      font-size: 1rem;
-    }
-  }
-  
+}

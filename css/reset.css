@@ -15,7 +15,13 @@ body {
     font-family: 'Arial', sans-serif;
     font-size: 1rem;
     line-height: 1.5;
+    background-image: url("/image/sean-pollock-PhYq704ffdA-unsplash.webp");
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en la pantalla */
+    background-attachment: fixed; /* Hace que la imagen de fondo permanezca fija al desplazarse */
 }
+
 
 /* Contenedor fluido */
 .container {
