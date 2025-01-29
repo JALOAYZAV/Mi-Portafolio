@@ -3,23 +3,33 @@
   background-color: rgba(255, 255, 255, 1) ; /* Blanco */
   width: 100vw;
   height: 100vh;
-  margin: 50px 0 0 0;
-  
-  
+  margin: 80px 0 0 0;
 }
 
 /* Título de la sección */
-#about main:nth-child(1) {
+#about h1 {
   background-color: rgb(31, 28, 28) ; 
   color: aliceblue;
   width: 100vw;
-  padding: 100px 0 0 0;
-  border: solid red;;
+  padding: 100px 0px 0 50px;
 }
 
-main:nth-of-type(2), main:nth-of-type(3) {
-  padding: 50px 0 0 50px ;
+.about-container {
+  position: relative;
+  top: 90px;
+  left: 50px;
+  padding:  60px 80px ;
   width: 50%;
   text-align: justify;
+  width: 50vw;
+  height: 50vh;
+  border-radius: 53px;
+  background: #e0e0e0;
+  box-shadow:  34px 34px 44px #6e6e6e,
+            -34px -34px 44px #ffffff;
 
+}
+
+.about-container .about-text{
+  margin-bottom: 25px;
 }

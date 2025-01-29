@@ -18,3 +18,7 @@ body {
     background-position: center center;
     background-attachment: fixed;
 }
+
+h1{
+    text-transform: uppercase;
+}

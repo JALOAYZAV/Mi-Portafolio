@@ -13,18 +13,18 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center; 
+  align-items: center; /* Alinea verticalmente */
   width: 100%;
+  height: 100%; /* Asegura que ocupe el 100% de la altura disponible */
   padding: 0;
-  margin: 0;
+  margin: 15vh;
 }
 
 #project h1 {
   background-color: rgb(31, 28, 28); 
   color: aliceblue;
   width: 100vw; 
-  padding: 20px 0; 
-  text-align: center; 
-  border: solid red;
+  padding: 20px 0 0 50px; 
   margin: 0; 
   box-sizing: border-box; 
 }
@@ -32,12 +32,60 @@
 .card {
   position: relative;
   width: 300px;
-  height: 320px;
+  height: 400px;
   margin: 12px;
   overflow: hidden;
-  background: linear-gradient(to bottom, #c3e6ec, #a7d1d9);
-  font-family: Arial, Helvetica, sans-serif;
-  border-radius: 10px;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  border-radius: 20px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow:  11px 11px 22px #aaaaaa,
+            -11px -11px 22px #ffffff;
+
+}
+
+.card-title {
+  color: #262626;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-align: center; 
+  margin-bottom: 10px; 
+}
+
+.card img {
+  max-width: 100%; 
+  height: auto; 
+  margin-bottom: 10px; 
+  border-radius: 8px; 
+}
+
+.small-desc {
+  font-size: 1em;
+  font-weight: 400;
+  color: #452c2c;
+  text-align: center; 
+}
+
+.go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background: linear-gradient(135deg, #6293c8, #384c6c);
+  border-radius: 0 4px 0 32px;
+}
+
+.go-arrow {
+  color: white;
+  font-family: courier, sans-serif;
 }
 
 .card-front, .card-back {
@@ -49,6 +97,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   transition: transform 0.6s ease;
   backface-visibility: hidden;
 }
@@ -70,43 +119,4 @@
 
 .card:hover .card-back {
   transform: rotateY(0deg);
-}
-
-.card-title {
-  color: #262626;
-  font-size: 1.5em;
-  font-weight: 700;
-  margin-bottom: 0.5em;
-}
-
-.card img {
-  max-width: 100%; 
-  height: auto; 
-  margin-bottom: 10px; 
-  border-radius: 8px; 
-}
-
-.small-desc {
-  font-size: 1em;
-  font-weight: 400;
-  color: #452c2c;
-}
-
-.go-corner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  width: 2em;
-  height: 2em;
-  overflow: hidden;
-  top: 0;
-  right: 0;
-  background: linear-gradient(135deg, #6293c8, #384c6c);
-  border-radius: 0 4px 0 32px;
-}
-
-.go-arrow {
-  color: white;
-  font-family: courier, sans-serif;
 }
