@@ -1,0 +1,102 @@
+/* Título de la sección */
+.skill-title {
+  font-size: 2.5rem;
+  color: var(--color-titulo);
+  margin-bottom: 20px; /* Espaciado debajo del título */
+  font-weight: bold;
+  text-align: center; /* Centra el título */
+}
+
+/* Contenedor principal de la sección de habilidades */
+.skills {
+  background-color: white; /* Fondo blanco para toda la sección */
+  padding: 50px 20px; /* Espaciado interno */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar la sección */
+  display: flex;
+  flex-direction: column; /* Apila los elementos verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+  gap: 30px; /* Espaciado entre los bloques */
+  margin: 50px auto; /* Centra la sección en la página */
+  width: 100%; /* Ajusta el ancho de la sección */
+  
+}
+
+/* Contenedor de las imágenes */
+.image-container {
+  display: flex;
+  justify-content: center; /* Centra las imágenes horizontalmente */
+  align-items: center; /* Centra las imágenes verticalmente */
+  gap: 500px; /* Espaciado entre imágenes */
+  flex-wrap: wrap; /* Permite que las imágenes se reorganicen en filas si hay poco espacio */
+  width: 100%;
+}
+
+
+
+.image-container img {
+  width: 200px; /* Tamaño inicial */
+  height: 200px;
+  object-fit: cover; /* Recorta y adapta la imagen */
+  border-radius: 50%; /* Hace la imagen circular */
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5), -4px -4px 15px rgba(0, 0, 0, 0.7); /* Sombra */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza la animación */
+}
+
+.image-container img:hover {
+  transform: scale(1.2); /* Agranda la imagen al pasar el mouse */
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.6), -8px -8px 20px rgba(0, 0, 0, 0.8); /* Cambia la sombra al agrandarse */
+}
+
+
+
+/* Contenedor de las habilidades */
+.skill-content {
+  display: flex;
+  justify-content: center; /* Espacia las tablas uniformemente */
+  align-items: flex-start; /* Alinea las tablas en la parte superior */
+  gap: 300px; /* Espaciado entre las tablas */
+  width: 100%;
+}
+
+.tab-content {
+  background-color: #ffffff; /* Fondo base */
+  border-radius: 15px; /* Bordes redondeados */
+  padding: 40px 100px;
+  box-shadow: 
+    inset 10px 10px 15px rgba(0, 0, 0, 0.2), /* Sombra oscura hacia adentro */
+    inset -10px -10px 15px rgba(255, 255, 255, 0.7); /* Sombra clara hacia adentro */
+  box-shadow: 
+    inset -10px -10px 15px rgba(0, 0, 0, 0.2), /* Sombra oscura hacia adentro */
+    inset 10px 10px 15px rgba(255, 255, 255, 0.7); /* Sombra clara hacia adentro */ 
+  text-align: center; /* Centra el contenido */
+  transition: all 0.3s ease; /* Animación suave */
+}
+
+.tab-content:hover {
+  box-shadow: 
+  inset 5px 5px 30px rgba(0, 0, 0, 0.3), /* Sombras más suaves al pasar el mouse */
+  inset -5px -5px 30px rgba(255, 255, 255, 0.8);
+  box-shadow:
+  inset 5px 5px 30px rgba(0, 0, 0, 0.3), /* Sombras más suaves al pasar el mouse */
+  inset -5px -5px 30px rgba(255, 255, 255, 0.8);
+  transform: scale(1.02); /* Ligeramente más grande */
+
+  }
+
+.tab-content h2 {
+  font-size: 1.8rem;
+  color: var(--color-titulo);
+  margin-bottom: 15px;
+}
+
+.tab-content ul {
+  list-style: none; /* Elimina los puntos de la lista */
+  padding: 0; /* Elimina el relleno interno */
+}
+
+.tab-content li {
+  font-size: 1rem;
+  color: var(--color-texto);
+  margin-bottom: 10px;
+}

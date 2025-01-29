@@ -5,27 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Document</title>
+    <title>Personal Portfolio - J.Loayza</title>
 </head>
 <body>
-    <div id="main-container">
-
-    <div include-html="./section/home.html"></div>   
-    <div include-html="./section/header.html"></div>
-    <div include-html="./section/about.html"></div>
-    <div include-html="./section/skill.html"></div>
-    <div include-html="./section/project.html"></div>
-    <div include-html="./section/contact.html"></div>
-    <div include-html="./section/footer.html"></div>
-    
+    <div id="container">
+        <div include-html="./section/home.html"></div>
+        <div include-html="./section/header.html"></div>
+        <div include-html="./section/about.html"></div>
+        <div include-html="./section/skills.html"></div>
+        <div include-html="./section/project.html"></div>
+        <div include-html="./section/contact.html"></div>
+        <div include-html="./section/footer.html"></div>
     </div>
-
-    <script src="/js/include-html.js"></script>
-    <script>
-        function toggleMenu() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        }
-    </script>
     
+    <script src="./js/include-html.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

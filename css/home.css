@@ -1,56 +1,114 @@
-/* HERO SECTION */
+/* Estilo general para la sección hero */
 .hero {
-  position: relative;
-  height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
+  align-items: center;
   text-align: center;
-  overflow: hidden;
+  height: 100vh;
+  overflow: hidden; /* Evita desplazamiento extra */
+  position: relative;
+  z-index: 1001;
+
 }
 
-/* Video de fondo */
+/* Fondo de imagen */
+.image-background {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
+  position: relative;
+  left: 70px;
+
+}
+
+/* Imagen con animación */
+.image-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(5);
+  filter: contrast(2);
+  
+  /* Inicialmente, la imagen estará completamente invisible */
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards; /* Aplica la animación */
+}
+
+/* Definir la animación de "fade in" */
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Comienza invisible */
+  }
+  100% {
+    opacity: 1; /* Se vuelve completamente visible */
+  }
+}
+
+/* Añade un gradiente en la parte inferior */
+.image-background::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%; /* Ajusta según el área que quieras difuminar */
+  pointer-events: none; /* Asegura que el gradiente no interfiera con otros elementos */
+}
+
+/* Fondo de video */
 .video-background video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  z-index: -1;
+  object-fit: cover; /* Asegura que el video cubra todo el contenedor sin deformarse */
+  z-index: 0; /* Video al fondo */
+  
 }
 
-/* Imagen de perfil animada */
-.image-background .mifoto {
-  width: 250px;
-  opacity: 0;
-  transform: translateX(-50px);
-  animation: fadeInLeft 1s ease-out forwards;
+
+/* Contenido del hero */
+.hero-content {
+  z-index: 2; /* Asegura que el contenido esté por encima del video */
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  text-align: center;
+  color: var(--clr-white); /* Blanco */
+  animation: fadeIn 1s ease-in-out; /* Agregar animación */
+  position: relative;
+  right: 200px;
+  top: 110px;
 }
 
-@keyframes fadeInLeft {
+/* Animación de entrada */
+@keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: scale(0.95);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: scale(1);
   }
 }
 
-/* Título con efecto de escritura */
+/* Título */
 .title h1 {
-  font-size: 2.5rem;
-  color: var(--color-titulo);
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 2px solid var(--color-enlaces);
-  width: 0;
-  animation: typing 3s steps(20, end) forwards, blink 0.7s infinite;
+  font-size: 4rem;
+  margin-bottom: 100px;
+  color: var(--color-titulo); /* Usa el color dorado definido */
+  white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+  overflow: hidden; /* Oculta el texto extra */
+  border-right: 0.15em solid var(--color-titulo); /* Simula el cursor de escritura */
+  width: 0; /* Inicialmente el ancho es 0 */
+  animation: typing 4s steps(40) 1s 1 normal both, blink 0.75s step-end infinite; /* Animaciones */
 }
 
+/* Animación de "escritura" */
 @keyframes typing {
   from {
     width: 0;
@@ -60,63 +118,135 @@
   }
 }
 
+/* Animación del cursor (parpadeo) */
 @keyframes blink {
   50% {
-    border-color: transparent;
+    border-color: transparent; /* El cursor se oculta en la mitad del ciclo */
   }
 }
 
-/* Párrafo con fade-in desde abajo */
-.hero-content p {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1.5s ease-out 1s forwards;
+/* Texto descriptivo */
+.hero p {
+  font-size: 1.2rem;
+  margin: 15px;
+  color: #f7f6f4; /* Gris oscuro */
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.hero h3 {
+  text-decoration: underline;
+  text-decoration-color: #f7f6f4; /* Opcional: Color del subrayado */
+  text-decoration-thickness: 1px; /* Opcional: Grosor del subrayado */
 }
 
-/* Botones con efecto de luz neón */
-.cta-buttons .button {
-  display: inline-block;
-  padding: 10px 20px;
-  color: white;
+/* Botones */
+.btn1 .btn2 {
+  display: inline-flex;
+  align-items: center; /* Centra iconos y texto verticalmente */
+  justify-content: space-between; /* Alineación horizontal */
+  margin: 50px;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: bold;
   text-decoration: none;
   border-radius: 5px;
-  transition: 0.3s ease-in-out;
-  background-color: var(--color-botones);
-  box-shadow: 0 0 10px rgba(79, 138, 139, 0.5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Transición suave */
 }
 
-.cta-buttons .button:hover {
-  box-shadow: 0 0 20px var(--color-botones), 0 0 40px var(--color-botones);
-}
-
-/* Redes sociales en la parte superior derecha */
-.social-media {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+.cta-buttons {
   display: flex;
-  gap: 10px;
+  justify-content: space-around;
+  width: auto;
+  margin: 100px 0px;
+}
+
+/* Efecto hover */
+.btn:hover {
+  background-color: var(--clr-neon); /* Color neon para hover */
+  box-shadow: 0 0 12px var(--clr-neon); /* Sombra que resalta el botón */
+}
+
+/* Botón con borde y animación */
+.button {
+  font-size: 1em;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--clr-neon); /* Neon */
+  border: 4px solid var(--clr-neon); /* Neon */
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+  text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.55), 0 0 0.5em currentColor;
+  box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+  position: relative;
+  transition: color 0.3s ease, transform 0.5s linear;
+}
+
+.button::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  background: var(--clr-neon);
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: perspective(1.2em) rotateX(40deg) scale(1.5, 0.5);
+  filter: blur(1.15em);
+  opacity: 0.7;
+  transition: transform 0.5s linear;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 4em 0.6em var(--clr-neon), 0 0 1em 0.2em var(--clr-white);
+  opacity: 0;
+  background: var(--clr-neon);
+  transition: opacity 0.5s linear;
+}
+
+.button:hover,
+.button:focus {
+  color: var(----clr-bg); 
+}
+
+.button:hover::before,
+.button:focus::before {
+  opacity: 1;
+  transform: perspective(1em) rotateX(40deg) scale(1.5, 0.6);
+}
+
+.button:hover::after,
+.button:focus::after {
+  opacity: 1;
+}
+
+
+.social-media {
+  z-index: 3;
+  display: flex;
+  position: relative;
+  right: 30px;
+  top: 30px;
+  width: auto;
+  height: 100%;
+
 }
 
 .social-media a {
-  font-size: 1.5rem;
-  color: var(--color-enlaces);
-  transition: transform 0.3s;
+  font-size: 1.8em;
+  color: #333;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+  
 }
 
 .social-media a:hover {
-  transform: scale(1.2);
+  color: #1e90ff;
+  
 }
-
-

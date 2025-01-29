@@ -1,67 +1,63 @@
+/* Estilo minimalista para la sección de Contacto */
 #contact {
-    background-color: var(--color-fondo-secundario);
+    background-color: #fff; /* Fondo blanco */
+    padding: 50px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-bottom: 100px;
+  }
+  
+  #contact h2 {
+    font-size: 2.5em;
+    color: var(--color-titulo); /* Título en gris oscuro */
+    margin-bottom: 10px;
+  }
+  
+  #contact p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .contact-form {
     display: flex;
-    flex-direction: column;  /* Para que los elementos internos se apilen */
-    height: 100%;             /* Esto asegura que todas las secciones tengan el mismo alto */
-    padding: 20px;            /* Ajusta el padding si es necesario */
-    box-sizing: border-box;   
-}
-
-#contact h2 {
-    color: var(--color-titulo);
-    font-family: Poppins, sans-serif;
-}
-
-#contact p {
-    color: var(--color-texto);
-    font-family: Poppins, sans-serif;
-    margin-bottom: 20px;
-}
-
-#contact form {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
-    padding: 20px;
-    border: 1px solid var(--color-fondo);
-    border-radius: 10px;
-    background-color: var(--color-fondo-secundario);
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    font-weight: 700;
-    color: var(--color-texto);
-}
-
-.form-group input, .form-group textarea {
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px; /* Máximo tamaño de los formularios */
+    margin: 0 auto; /* Centrado */
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
     width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid var(--color-fondo);
-    border-radius: 5px;
-    margin-top: 5px;
-}
-
-.form-group textarea {
-    resize: vertical;
-}
-
-button {
-    background-color: var(--color-botones);
-    color: var(--color-fondo-secundario);
-    padding: 10px 20px;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none; /* Elimina los bordes por defecto */
+    border-bottom: 1px solid rgb(158, 154, 154); /* Agrega borde solo en la parte inferior */
+    font-size: 1em;
+    color: #29272798;
+    transition: border-color 0.3s ease;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-bottom: 2px solid #1e90ff; /* Cambia el borde inferior a azul cuando está en foco */
+    outline: none;
+  }
+  
+  .contact-form button {
+    background-color: #1e90ff;
+    color: #fff;
+    padding: 12px 20px;
     border: none;
     border-radius: 5px;
+    font-size: 1em;
     cursor: pointer;
-    font-family: Poppins, sans-serif;
-}
-
-button:hover {
-    background-color: var(--color-enlaces);
     transition: background-color 0.3s ease;
-}
+  }
+  
+  .contact-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  

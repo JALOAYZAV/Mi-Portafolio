@@ -1,0 +1,13 @@
+/* color.css */
+
+/* Definir colores en variables */
+:root {
+    --color-fondo: #ffffff; /* Blanco */
+    --color-texto: #333333; /* Gris oscuro */
+    --color-enlace: #1e90ff; /* Azul brillante */
+    --color-titulo: #f1c40f; /* Dorado */
+    --color-boton: rgb(97, 134, 235);;
+    --clr-neon: rgba(97, 134, 235, 1);
+    --clr-bg: rgba(1, 1, 1, 1);
+    --clr-white: rgba(255, 255, 255, 1);
+}

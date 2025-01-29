@@ -1,46 +1,28 @@
 function includeHTML() {
     var z, i, elmnt, file, xhttp;
-
+    /*loop through a collection of all HTML elements:*/
     z = document.getElementsByTagName("*");
     for (i = 0; i < z.length; i++) {
-        elmnt = z[i];
-
-        file = elmnt.getAttribute("include-html");
-        if (file) {
-
-            xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function () {
-                if (this.readyState == 4) {
-                    if (this.status == 200) {
-                        elmnt.innerHTML = this.responseText;
-                    }
-                    if (this.status == 404) {
-                        elmnt.innerHTML = "Page not found.";
-                    }
-                    elmnt.removeAttribute("include-html");
-                    includeHTML();  // Recursión para procesar más elementos si los hay
-                }
-            }
-            xhttp.open("GET", file, true);
-            xhttp.send();
-
-            return;  // Importante: no seguir ejecutando el ciclo hasta que se cargue el contenido
-        }
+      elmnt = z[i];
+      /*search for elements with a certain atrribute:*/
+      file = elmnt.getAttribute("include-html");
+      if (file) {
+        /*make an HTTP request using the attribute value as the file name:*/
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            /*remove the attribute, and call this function once more:*/
+            elmnt.removeAttribute("include-html");
+            includeHTML();
+          }
+        }      
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /*exit the function:*/
+        return;
+      }
     }
-};
-
-includeHTML();  // Llamada inicial para cargar el contenido
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const header = document.querySelector("header");
-    const homeSection = document.querySelector("#home");
-
-    window.addEventListener("scroll", function () {
-        if (window.scrollY > homeSection.offsetHeight) {
-            header.classList.add("visible"); // Muestra el header
-        } else {
-            header.classList.remove("visible"); // Oculta el header
-        }
-    });
-});
+  };
+  includeHTML();

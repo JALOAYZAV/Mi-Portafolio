@@ -1,54 +1,79 @@
-#about{
-    background-color: var(--color-fondo-secundario);
-
-    display: flex;
-    flex-direction: column;  /* Para que los elementos internos se apilen */
-    height: 100%;             /* Esto asegura que todas las secciones tengan el mismo alto */
-    padding: 20px;            /* Ajusta el padding si es necesario */
-    box-sizing: border-box;   
+/* Estilos generales para la sección "Sobre Mí" */
+#about {
+  background-color: rgba(255, 255, 255, 1) ; /* Blanco */
+  padding: 100px 200px;
+  margin: 200px auto;
+  width: auto;
+  height: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  
 }
 
-
-
-.about-content {
-    width: 60%;
+/* Título de la sección */
+#about h2 {
+  font-size: 2.2rem;
+  color: var(--color-titulo); /* Dorado */
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
 }
 
-.about-image {
-    width: 30%;
-    text-align: center;
+.about-content{
+  background-color: #ffffff; /* Fondo base */
+  border-radius: 15px; /* Bordes redondeados */
+  padding: 50px;
+  box-shadow: 
+    inset 10px 10px 30px rgba(0, 0, 0, 0.2), /* Sombra oscura hacia adentro */
+    inset -10px -10px 30px rgba(255, 255, 255, 0.7); /* Sombra clara hacia adentro */
+  box-shadow: 
+    inset -10px -10px 30px rgba(0, 0, 0, 0.2), /* Sombra oscura hacia adentro */
+    inset 10px 10px 30px rgba(255, 255, 255, 0.7); /* Sombra clara hacia adentro */ 
+  text-align: center; /* Centra el contenido */
+  transition: all 0.3s ease; /* Animación suave */
+
 }
 
-.about-image img {
-    width: 100%;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra alrededor de la imagen */
+.about-content:hover {
+  padding: 50px;
+  box-shadow: 
+  inset 5px 5px 15px rgba(0, 0, 0, 0.3), /* Sombras más suaves al pasar el mouse */
+  inset -5px -5px 15px rgba(255, 255, 255, 0.8);
+  box-shadow:
+  inset 5px 5px 15px rgba(0, 0, 0, 0.3), /* Sombras más suaves al pasar el mouse */
+  inset -5px -5px 15px rgba(255, 255, 255, 0.8);
+  transform: scale(1.02); /* Ligeramente más grande */
+
+  }
+  
+
+
+/* Párrafos dentro de la sección */
+#about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-texto); /* Gris oscuro */
+  margin-bottom: 20px;
+  text-align: justify;
 }
 
-.section-title {
-    color: var(--color-titulo);
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+/* Estilos para los elementos destacados dentro de los párrafos */
+#about strong {
+  font-weight: 600;
+  color: var(--color-enlace); /* Azul brillante */
 }
 
-.about-text {
-    color: var(--color-texto);
-    font-size: 1.2rem;
-    line-height: 1.8;
-}
+/* Respuesta para pantallas pequeñas */
+@media (max-width: 768px) {
+  #about {
+    padding: 20px 10px;
+  }
 
-.cta-button {
-    background-color: var(--color-boton);
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 20px;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-}
+  #about h2 {
+    font-size: 1.8rem;
+  }
 
-.cta-button:hover {
-    background-color: var(--clr-neon);
+  #about p {
+    font-size: 1rem;
+  }
 }
