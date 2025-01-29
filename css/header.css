@@ -1,12 +1,22 @@
 /* Estilos para el header */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 0px; /* Ajustar el padding */
-    background-color: var(--color-fondo-secundario);
-    position: relative; /* Asegura que los elementos estén bien posicionados */
-  }
+  width: 100%;
+  position: absolute; /* Al inicio está en posición absoluta */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 0; /* Inicialmente oculto */
+  transition: opacity 0.3s ease-in-out, position 0.3s ease-in-out;
+}
+
+/* Cuando el header debe aparecer */
+header.visible {
+  position: fixed;
+  opacity: 1; /* Se vuelve visible */
+  background-color: var(--color-fondo-secundario);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Agregar sombra */
+}
+
   
   header .logo img {
     width: 100px; /* Ajustar el tamaño del logo */

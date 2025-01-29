@@ -1,0 +1,50 @@
+.about-me {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: var(--color-fondo-secundario); /* Fondo con el color secundario */
+}
+
+.about-content {
+    width: 60%;
+}
+
+.about-image {
+    width: 30%;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra alrededor de la imagen */
+}
+
+.section-title {
+    color: var(--color-titulo);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    color: var(--color-texto);
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.cta-button {
+    background-color: var(--color-boton);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--clr-neon);
+}

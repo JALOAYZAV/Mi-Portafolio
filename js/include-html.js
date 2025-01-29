@@ -32,3 +32,15 @@ function includeHTML() {
 includeHTML();  // Llamada inicial para cargar el contenido
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const header = document.querySelector("header");
+    const homeSection = document.querySelector("#home");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > homeSection.offsetHeight) {
+            header.classList.add("visible"); // Muestra el header
+        } else {
+            header.classList.remove("visible"); // Oculta el header
+        }
+    });
+});
