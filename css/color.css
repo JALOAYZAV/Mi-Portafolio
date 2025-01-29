@@ -1,12 +1,15 @@
 /* color.css */
 :root {
-    --color-fondo-principal: #F5F5F5;
+    --color-fondo: #F5F5F5;
     --color-fondo-secundario: #FFFFFF;
-    --color-texto-principal: #333333;
+    --color-texto: #333333;
     --color-texto-secundario: #777777;
     --color-enlaces: #2D9CDB;
-    --color-botones: #4F8A8B;
+    --color-boton: #4F8A8B;
     --color-titulo: #111111;
     --color-sombra-fondo: rgba(0, 0, 0, 0.1);
     --color-acento: #FF6F61;
+    --clr-neon: rgba(97, 134, 235, 1);
+    --clr-bg: rgba(1, 1, 1, 1);
+    --clr-white: rgba(255, 255, 255, 1)
 }
