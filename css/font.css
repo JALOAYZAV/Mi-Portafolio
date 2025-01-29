@@ -3,19 +3,19 @@
 /* Fuente Poppins desde carpeta local */
 @font-face {
     font-family: 'Poppins';
-    src: url('font/Poppins/Poppins-Regular.ttf') format('truetype'); /* Para la fuente normal */
+    src: url('/font/Poppins/Poppins-Regular.ttf') format('truetype'); /* Para la fuente normal */
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Poppins';
-    src: url('font/Poppins/Poppins-Bold.ttf') format('truetype'); /* Para la fuente en negrita */
+    src: url('/font/Poppins/Poppins-Bold.ttf') format('truetype'); /* Para la fuente en negrita */
     font-weight: bold;
     font-style: normal;
 }
 @font-face {
     font-family: 'Poppins';
-    src: url('font/Poppins/Poppins-Italic.ttf') format('truetype'); /* Si tienes una variante en itálica */
+    src: url('/font/Poppins/Poppins-Italic.ttf') format('truetype'); /* Si tienes una variante en itálica */
     font-weight: normal;
     font-style: italic;
 }

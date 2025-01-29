@@ -1,30 +1,65 @@
-/* reset.css */
-*,
-*::before,
-*::after {
+/* Reiniciar estilos de la web */
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Asegura que el padding y border no afecten el tamaño de los elementos */
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Fuente por defecto */
+    background-color: var(--color-fondo); /* Fondo según tu paleta */
+    color: var(--color-texto); /* Color de texto según tu paleta */
+    line-height: 1.6; /* Alineación de líneas para mejor legibilidad */
+    background-image: url('path/to/your/image.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center center; /* Centra la imagen */
+    background-attachment: fixed; /* Hace que la imagen no se mueva cuando se hace scroll */
+}
+
+  /* Encabezados (H1, H2, H3, etc.) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold; /* Negrita por defecto */
+    color: var(--color-titulo); /* Color dorado de la paleta */
+}
+
+  /* Subtítulos */
+h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    color: var(--color-texto); /* Color de texto más suave */
+}
+
+  /* Párrafos */
+p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
     font-size: 1rem;
-    line-height: 1.5;
-    color: blue;
+    color: var(--color-texto); /* Color de texto para párrafos */
 }
 
-/* Contenedor fluido */
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  /* Enlaces */
+a {
+    color: var(--color-enlace); /* Azul brillante para enlaces */
+    text-decoration: none; /* Elimina subrayado */
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
+a:hover {
+    color: var(--color-titulo); /* Cambia el color al pasar el ratón */
+    text-decoration: underline; /* Subraya el enlace en hover */
+}
+
+  /* Botones */
+button, input[type="button"], input[type="submit"] {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-boton); /* Azul claro para botones */
+    color: var(--clr-white); /* Blanco para el texto del botón */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+button:hover, input[type="button"]:hover, input[type="submit"]:hover {
+    background-color: var(--color-enlace); /* Cambia el color al pasar el ratón */
 }
