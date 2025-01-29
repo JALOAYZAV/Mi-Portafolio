@@ -2,32 +2,33 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Asegura que el padding y border no afecten el tamaño de los elementos */
+    box-sizing: border-box;
 }
-
+    
+  /* Body */
 body {
-    font-family: 'Poppins', sans-serif; /* Fuente por defecto */
-    background-color: var(--color-fondo); /* Fondo según tu paleta */
-    color: var(--color-texto); /* Color de texto según tu paleta */
-    line-height: 1.6; /* Alineación de líneas para mejor legibilidad */
-    background-image: url('path/to/your/image.jpg'); /* Imagen de fondo */
-    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
-    background-position: center center; /* Centra la imagen */
-    background-attachment: fixed; /* Hace que la imagen no se mueva cuando se hace scroll */
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-fondo-principal);
+    color: var(--color-texto-principal);
+    line-height: 1.6;
+    background-image: url('/image/sean-pollock-PhYq704ffdA-unsplash.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
-  /* Encabezados (H1, H2, H3, etc.) */
+  /* Encabezados */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
-    font-weight: bold; /* Negrita por defecto */
-    color: var(--color-titulo); /* Color dorado de la paleta */
+    font-weight: bold;
+    color: var(--color-titulo);
 }
 
   /* Subtítulos */
 h2, h3, h4 {
     font-family: 'Poppins', sans-serif;
     font-weight: normal;
-    color: var(--color-texto); /* Color de texto más suave */
+    color: var(--color-texto-secundario);
 }
 
   /* Párrafos */
@@ -35,31 +36,38 @@ p {
     font-family: 'Poppins', sans-serif;
     font-weight: normal;
     font-size: 1rem;
-    color: var(--color-texto); /* Color de texto para párrafos */
+    color: var(--color-texto-principal);
 }
 
   /* Enlaces */
 a {
-    color: var(--color-enlace); /* Azul brillante para enlaces */
-    text-decoration: none; /* Elimina subrayado */
+    color: var(--color-enlaces);
+    text-decoration: none;
 }
 
 a:hover {
-    color: var(--color-titulo); /* Cambia el color al pasar el ratón */
-    text-decoration: underline; /* Subraya el enlace en hover */
+    color: var(--color-acento);
+    text-decoration: underline;
 }
 
   /* Botones */
 button, input[type="button"], input[type="submit"] {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--color-boton); /* Azul claro para botones */
-    color: var(--clr-white); /* Blanco para el texto del botón */
+    background-color: var(--color-botones);
+    color: var(--color-fondo-secundario);
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    border-radius: 5px; /* Bordes redondeados */
+    border-radius: 5px;
 }
 
 button:hover, input[type="button"]:hover, input[type="submit"]:hover {
-    background-color: var(--color-enlace); /* Cambia el color al pasar el ratón */
+    background-color: var(--color-enlaces);
+    color: var(--color-fondo-secundario);
+}
+
+  /* Fondo con sombra */
+.hero-background {
+    background-color: var(--color-fondo-secundario);
+    box-shadow: 0px 4px 8px var(--color-sombra-fondo);
 }
