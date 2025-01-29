@@ -1,54 +1,20 @@
+
 #skill {
-    background-color: var(--color-fondo-secundario); /* Fondo de acuerdo a tu paleta */
-    display: flex;
-    flex-direction: column;  /* Para que los elementos internos se apilen */
-    height: 100%;             /* Esto asegura que todas las secciones tengan el mismo alto */
-    padding: 20px;            /* Ajusta el padding si es necesario */
-    box-sizing: border-box;   
-  }
-  
-  .container {
-    width: 80%;
-    margin: 0 auto;
-  }
-  
-  h2 {
-    text-align: center;
-    color: var(--color-titulo);
-    font-family: 'Poppins', sans-serif;
-    font-size: 2em;
-  }
-  
-  .skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .skill {
-    width: 48%;
-    margin: 20px 0;
-    padding: 20px;
-    background-color: var(--clr-bg);
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .skill h3 {
-    color: var(--color-titulo);
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5em;
-  }
-  
-  .skill p {
-    color: var(--color-texto);
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1em;
-  }
-  
-  @media (max-width: 768px) {
-    .skill {
-      width: 100%;
-    }
-  }
-  
+    background-color: var(--color-fondo-secundario); 
+    width: auto;
+    height: 100vh;
+    margin: 50px 0 0 0;
+}
+
+#skill h1{
+  background-color: rgb(31, 28, 28) ; 
+  color: aliceblue;
+  width: 100vw;
+  padding: 100px 0 0 0;
+  border: solid red;
+}
+
+#skill main{
+  width: 100vw;
+  padding: 100px 0 0 50px;
+}
