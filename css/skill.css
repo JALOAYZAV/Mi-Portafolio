@@ -1,4 +1,4 @@
-#skills {
+#skill {
     background-color: var(--color-fondo-secundario); /* Fondo de acuerdo a tu paleta */
     display: flex;
     flex-direction: column;  /* Para que los elementos internos se apilen */
