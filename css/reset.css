@@ -8,7 +8,7 @@
   /* Body */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--color-fondo-principal);
+    /*background-color: var(--color-fondo-principal);*/
     color: var(--color-texto-principal);
     line-height: 1.6;
     background-image: url('/image/sean-pollock-PhYq704ffdA-unsplash.jpg');
@@ -68,6 +68,65 @@ button:hover, input[type="button"]:hover, input[type="submit"]:hover {
 
   /* Fondo con sombra */
 .hero-background {
-    background-color: var(--color-fondo-secundario);
     box-shadow: 0px 4px 8px var(--color-sombra-fondo);
+}
+
+/* Botones con bordes de neón */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--clr-neon); /* Color de texto inicial (neón) */
+  border: 2px solid var(--clr-neon); /* Bordes de neón */
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  background: transparent; /* Fondo transparente */
+  overflow: hidden; /* Evita que los brillos se salgan */
+  box-shadow: 0 0 10px var(--clr-neon), 0 0 40px var(--clr-neon); /* Efecto de "brillo" */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Efecto hover: fondo neón y cambio de texto */
+.button:hover {
+  background: var(--clr-neon); /* Fondo de color neón */
+  color: var(--clr-bg); /* Color del texto cambia a oscuro */
+  box-shadow: 0 0 20px var(--clr-neon), 0 0 50px var(--clr-neon); /* Brillo más intenso */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Efectos decorativos (luces tipo focos) */
+.button::before, .button::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 300%;
+  background: radial-gradient(circle, var(--clr-neon) 0%, transparent 80%);
+  top: -100%;
+  animation: focus-lights 2s infinite linear;
+  opacity: 0.3; /* Hace que la luz sea más sutil */
+  pointer-events: none; /* Evita que interfiera con el hover */
+}
+
+.button::before {
+  left: -100%; /* Foco izquierdo */
+}
+
+.button::after {
+  right: -100%; /* Foco derecho */
+}
+
+/* Animación de los focos */
+@keyframes focus-lights {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

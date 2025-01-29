@@ -1,0 +1,77 @@
+/* Estilos para el header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px; /* Ajustar el padding */
+    background-color: var(--color-fondo-secundario);
+    position: relative; /* Asegura que los elementos estén bien posicionados */
+  }
+  
+  header .logo img {
+    width: 100px; /* Ajustar el tamaño del logo */
+    height: 100px; /* Mantener las proporciones del logo */
+    padding: 20px;
+    margin: 0;
+    position: relative;
+    bottom: 0px;     
+    border: solid red;
+  }
+  
+  /* Ajustes para los enlaces de navegación */
+  nav .nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center; /* Alineación vertical */
+  }
+  
+  /* Ajustes de los enlaces */
+  nav .nav-links li a {
+    color: var(--color-texto-principal);
+    text-decoration: none;
+    padding: 5px 10px; /* Añadir algo de relleno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Añadir animación suave */
+  }
+  
+  /* Efecto hover en los enlaces */
+  nav .nav-links li a:hover {
+    color: var(--color-enlaces);
+    background-color: var(--color-fondo-secundario); /* Fondo al hacer hover */
+  }
+  
+  /* Menú hamburguesa (en pantallas pequeñas) */
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 30px; /* Ajusta el tamaño del ícono */
+    color: var(--color-texto-principal);
+  }
+  
+  @media screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav .nav-links {
+      display: none;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    /* Menú visible cuando la clase 'active' se aplica */
+    nav .nav-links.active {
+      display: block;
+    }
+  
+    nav .nav-links li {
+      margin: 10px 0;
+    }
+  }
+ 
+ 

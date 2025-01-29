@@ -30,3 +30,5 @@ function includeHTML() {
 };
 
 includeHTML();  // Llamada inicial para cargar el contenido
+
+
