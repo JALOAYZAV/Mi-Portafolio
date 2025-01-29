@@ -63,7 +63,6 @@
   padding: 0; /* Eliminar el padding para que ocupe todo el espacio */
   box-sizing: border-box;
   text-align:center;
-  background: url("/image/portafolio.webp") no-repeat center center / cover;
 }
 /* Título sobre la imagen */
 .project-front h3 {
@@ -96,7 +95,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   backface-visibility: hidden; /* Evita que la parte trasera sea visible cuando no está frente al espectador */
-  border: solid red; /* Esto es solo para depuración, puedes eliminarlo luego */
+  border: solid rgba(70, 66, 66, 0.5); /* Esto es solo para depuración, puedes eliminarlo luego */
   z-index: 2; /* Asegura que la parte trasera esté por encima de la parte frontal cuando está visible */
 }
 .project-back a {
