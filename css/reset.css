@@ -8,7 +8,6 @@
   /* Body */
 body {
     font-family: 'Poppins', sans-serif;
-    /*background-color: var(--color-fondo-principal);*/
     color: var(--color-texto-principal);
     line-height: 1.6;
     background-image: url('/image/sean-pollock-PhYq704ffdA-unsplash.jpg');
@@ -16,6 +15,14 @@ body {
     background-position: center center;
     background-attachment: fixed;
 }
+
+#main-container {
+  display: grid;
+  grid-template-columns: 1fr;  /* Una columna para organizar las secciones */
+  grid-gap: 20px; /* Espacio entre las secciones */
+  height: 400vh;
+}
+
 
   /* Encabezados */
 h1, h2, h3, h4, h5, h6 {

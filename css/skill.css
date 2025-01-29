@@ -1,7 +1,10 @@
 #skills {
     background-color: var(--color-fondo-secundario); /* Fondo de acuerdo a tu paleta */
-    padding: 40px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;  /* Para que los elementos internos se apilen */
+    height: 100%;             /* Esto asegura que todas las secciones tengan el mismo alto */
+    padding: 20px;            /* Ajusta el padding si es necesario */
+    box-sizing: border-box;   
   }
   
   .container {
