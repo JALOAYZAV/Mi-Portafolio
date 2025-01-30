@@ -27,15 +27,16 @@
   border-radius: 33px;
   background: linear-gradient(145deg, #cacaca, #f0f0f0);
   box-shadow:  25px 25px 9px #a1a1a1,
-               -25px -25px 9px #ffffff;
+            -25px -25px 9px #ffffff;
 }
 
 .about-container:hover{
   border: 2px rgba(255, 255, 255, 0);
 
-               background: border-radius(145deg, #f0f0f0, #cacaca);
+               
+  background: border-radius(145deg, #f0f0f0, #cacaca);
   box-shadow: inset 25px 25px 9px #a1a1a1,
-              inset -20px -20px 9px #ffffff;
+            inset -20px -20px 9px #ffffff;
 }
 
 .about-container .about-text{
