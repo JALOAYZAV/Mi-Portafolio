@@ -1,0 +1,56 @@
+/* Para tablets (pantallas menores a 1024px) */
+@media (max-width: 1024px) {
+    .container {
+      width: 90%;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  
+  /* Para celulares grandes (pantallas menores a 768px) */
+  @media (max-width: 768px) {
+    .skills-container {
+      flex-direction: column;
+    }
+  
+    .skill-card {
+      width: 100%;
+    }
+  
+    .hamburger {
+      display: flex; /* Mostrar botón hamburguesa */
+    }
+  
+    .navbar {
+      display: none;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+    }
+  
+    .navbar.active {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+  /* Para celulares pequeños (pantallas menores a 480px) */
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    .container {
+      padding: 10px;
+    }
+  
+    .navbar {
+      font-size: 0.9rem;
+    }
+  }
+  
