@@ -98,15 +98,16 @@
       padding: 20px;
       width: 90%;
       height: auto;
+      text-align: center; /* Centra el texto */
   }
 
   .image-stack {
       width: 250px;
       height: 350px;
-      margin: 20px 0; /* Asegura que la imagen no se quede a un lado */
+      margin: 20px auto; /* Centra la imagen en pantallas pequeñas */
   }
 
-  /* Hacer que la imagen se alinee correctamente con el texto en pantallas pequeñas */
+  /* Asegura que el contenedor de la imagen y el texto se alineen en una columna */
   .about-container {
       display: flex;
       flex-direction: column;
@@ -135,17 +136,46 @@
       padding: 15px;
       width: 90%;
       height: auto;
+      text-align: center; /* Asegura que el texto esté centrado */
   }
 
   .image-stack {
       width: 200px;
       height: 280px;
+      margin: 20px auto; /* Centra la imagen en pantallas muy pequeñas */
   }
 
   .image-stack img {
       animation: slide 10s infinite;
   }
 }
+
+/* Medias Queries para pantallas más grandes */
+@media screen and (min-width: 769px) {
+  .about-container {
+      display: flex;
+      flex-direction: row; /* Disposición en fila para pantallas grandes */
+      align-items: center;
+      justify-content: space-between;
+  }
+
+  .about-container .about-text {
+      text-align: left; /* Alinea el texto a la izquierda */
+      width: 50%; /* Limita el ancho del texto */
+  }
+
+  .image-stack {
+      width: 300px;
+      height: 400px;
+      margin: 0;
+      /* Posiciona la imagen a la derecha */
+  }
+
+  .about-container .image-stack {
+      margin-left: 20px;
+  }
+}
+
 
 
 
@@ -409,5 +439,79 @@
     padding: 10px 15px;
     height: 40px;
     font-size: 0.9rem;
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 15px; /* Ajusta el padding en pantallas más pequeñas */
+    height: 50px; /* Ajuste en altura */
+  }
+
+  .logo {
+    padding: 0 20px;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Fuera de la pantalla */
+    width: 60%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo más oscuro */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: right 0.3s ease-in-out;
+  }
+
+  .navbar.active {
+    right: 0; /* Muestra el menú */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Coloca los enlaces en columna */
+    gap: 15px;
+  }
+
+  .hamburger {
+    display: flex; /* Muestra el botón en móviles */
+    z-index: 1001; /* Asegura que esté sobre el menú */
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0; /* Esconde la barra del medio */
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .nav-links li a {
+    font-size: 1.2rem; /* Aumenta el tamaño del texto para ser más legible */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    width: 80%; /* Aumenta el ancho para pantallas aún más pequeñas */
+  }
+
+  .nav-links {
+    gap: 10px; /* Reduce el espacio entre los enlaces */
+  }
+
+  .hamburger {
+    padding: 10px; /* Espaciado para el icono de la hamburguesa */
+  }
+
+  .logo img {
+    width: 50px; /* Ajuste del tamaño del logo en pantallas pequeñas */
   }
 }

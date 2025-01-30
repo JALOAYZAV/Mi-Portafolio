@@ -1,15 +1,14 @@
-/* General del header */
 header {
   position: fixed; /* Fija el header al tope de la pantalla */
   top: 0;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 60px; /* Aumentado para mayor espacio en pantallas grandes */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: rgb(25, 86, 177); /* Fondo negro con transparencia */
+  background-color: rgb(25, 86, 177); /* Fondo azul */
   color: #fff;
   z-index: 1000;
 }
@@ -21,8 +20,7 @@ header {
   gap: 10px; /* Espacio entre el ícono y el texto */
   background-color: #064097;
   height: 50px;
-  padding: 0 50px;
-  margin-left: -20px;
+  padding: 0 20px; /* Ajuste para menos espacio */
 }
 
 .logo img {
@@ -30,10 +28,7 @@ header {
   height: auto; /* Mantén la proporción del ícono */
 }
 
-
-
-
-/* Navbar (oculto inicialmente en móviles) */
+/* Navbar (visible por defecto en pantallas grandes) */
 .navbar {
   display: flex;
 }
@@ -71,45 +66,4 @@ header {
   height: 3px;
   background-color: #fff;
   transition: all 0.3s ease;
-}
-
-/* Responsividad */
-@media (max-width: 768px) {
-  .navbar {
-    position: fixed;
-    top: 0;
-    right: -100%; /* Fuera de la pantalla */
-    width: 60%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Fondo más oscuro */
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    transition: right 0.3s ease-in-out;
-  }
-
-  .navbar.active {
-    right: 0; /* Muestra el menú */
-  }
-
-  .nav-links {
-    flex-direction: column; /* Coloca los enlaces en columna */
-  }
-
-  .hamburger {
-    display: flex; /* Muestra el botón en móviles */
-  }
-
-  .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .hamburger.active span:nth-child(2) {
-    opacity: 0; /* Esconde la barra del medio */
-  }
-
-  .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
 }
