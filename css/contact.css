@@ -1,63 +1,116 @@
-/* Estilo minimalista para la sección de Contacto */
 #contact {
-    background-color: #fff; /* Fondo blanco */
-    padding: 50px 20px;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    margin-bottom: 100px;
+    background-color: var(--color-fondo-secundario); 
+    width: 100vw;
+    height: 80vh;
+    position: relative;  
+    margin-top: 50px;
   }
   
-  #contact h2 {
-    font-size: 2.5em;
-    color: var(--color-titulo); /* Título en gris oscuro */
-    margin-bottom: 10px;
+  #contact h1 {
+    background-color: rgb(31, 28, 28) ; 
+    color: aliceblue;
+    width: 100vw;
+    padding: 20px 0 0 50px;
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
   }
   
   #contact p {
     font-size: 1.1em;
     color: #555;
-    margin-bottom: 30px;
-  }
+    margin-top: 100px;
+    text-align: center;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%; 
+  padding: 20px;
+  box-sizing: border-box; 
+  position: relative;
+  bottom: 10vh;
+}
+
+form {
+  background-color: rgba(128, 128, 128, 0.267);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%; 
+  max-width: 800px; 
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+  font-size: 100%;
+  padding: 0.8em;
+  outline: none;
+  border: 2px solid rgba(128, 128, 128, 0.267);
+  background-color: transparent;
+  height: 75px;
+  width: 100%;
+  background: linear-gradient(145deg, #FFFFFF, #C1C3C6);
+  border-radius: 20px;
+  box-shadow: 18.32px 18.32px 11px #CBCDD1, -18.32px -18.32px 11px #FFFFFF;
+}
+
+.form-group input:hover, .form-group textarea:hover{
+  transform: translateY(-10px);
   
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 500px; /* Máximo tamaño de los formularios */
-    margin: 0 auto; /* Centrado */
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: none; /* Elimina los bordes por defecto */
-    border-bottom: 1px solid rgb(158, 154, 154); /* Agrega borde solo en la parte inferior */
-    font-size: 1em;
-    color: #29272798;
-    transition: border-color 0.3s ease;
-  }
-  
-  .contact-form input:focus,
-  .contact-form textarea:focus {
-    border-bottom: 2px solid #1e90ff; /* Cambia el borde inferior a azul cuando está en foco */
-    outline: none;
-  }
-  
-  .contact-form button {
-    background-color: #1e90ff;
-    color: #fff;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .contact-form button:hover {
-    background-color: #0056b3;
-  }
-  
-  
+}
+
+.form-group label {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  padding: 0.8em;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: rgb(100, 100, 100);
+}
+
+.form-group :is(input:focus, input:valid)~label {
+  transform: translateY(-50%) scale(.9);
+  margin: 0em;
+  margin-left: 1.3em;
+  padding: 0.4em;
+  background-color: rgba(128, 128, 128, 0.267);
+}
+
+.form-groupp :is(input:focus, input:valid) {
+  border-color:rgba(128, 128, 128, 0.267);
+}
+
+#message{
+  height: 150px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 50px;
+}
+
+button:hover {
+  background-color: #125e15;
+}

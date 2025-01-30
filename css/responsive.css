@@ -1,0 +1,517 @@
+@media (max-width: 1024px) {
+  .hero {
+    height: 100vh; 
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .hero-content {
+    width: 90%;
+    position: static;
+    top: auto;
+    right: auto;
+    text-align: center;
+  }
+
+  .title h1 {
+    font-size: 3rem; 
+    margin-bottom: 50px;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+
+  .button {
+    padding: 0.3em 1.2em;
+    font-size: 1rem;
+  }
+
+  .social-media {
+    justify-content: center;
+    position: static;
+  }
+}
+
+/* Para móviles (≤768px) */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .image-background {
+    width: 100%;
+    height: auto;
+    left: 0;
+  }
+
+  .image-background img {
+    height: 60vh;
+  }
+
+  .hero-content {
+    width: 100%;
+    position: static;
+    text-align: center;
+    right: auto;
+    top: auto;
+  }
+
+  .title h1 {
+    font-size: 2rem; /* Reduce más el tamaño en móviles */
+    margin-bottom: 20px;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    padding: 0.3em 1em;
+    font-size: 0.9rem;
+  }
+
+  .social-media {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .social-media a {
+    font-size: 1.5rem;
+    margin: 10px;
+  }
+}
+
+/* Medias Queries para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  #about h1 {
+      font-size: 1.5rem;
+      padding: 20px 0 0 20px;
+  }
+
+  .about-container {
+      top: 50px;
+      left: 5%;
+      padding: 20px;
+      width: 90%;
+      height: auto;
+      text-align: center; /* Centra el texto */
+  }
+
+  .image-stack {
+      width: 250px;
+      height: 350px;
+      margin: 20px auto; /* Centra la imagen en pantallas pequeñas */
+  }
+
+  /* Asegura que el contenedor de la imagen y el texto se alineen en una columna */
+  .about-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .about-container .about-text {
+      text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #about {
+      height: auto;
+      margin: 40px 0;
+  }
+
+  #about h1 {
+      font-size: 1.2rem;
+      padding: 15px 0 0 15px;
+  }
+
+  .about-container {
+      top: 30px;
+      left: 2%;
+      padding: 15px;
+      width: 90%;
+      height: auto;
+      text-align: center; /* Asegura que el texto esté centrado */
+  }
+
+  .image-stack {
+      width: 200px;
+      height: 280px;
+      margin: 20px auto; /* Centra la imagen en pantallas muy pequeñas */
+  }
+
+  .image-stack img {
+      animation: slide 10s infinite;
+  }
+}
+
+/* Medias Queries para pantallas más grandes */
+@media screen and (min-width: 769px) {
+  .about-container {
+      display: flex;
+      flex-direction: row; /* Disposición en fila para pantallas grandes */
+      align-items: center;
+      justify-content: space-between;
+  }
+
+  .about-container .about-text {
+      text-align: left; /* Alinea el texto a la izquierda */
+      width: 50%; /* Limita el ancho del texto */
+  }
+
+  .image-stack {
+      width: 300px;
+      height: 400px;
+      margin: 0;
+      /* Posiciona la imagen a la derecha */
+  }
+
+  .about-container .image-stack {
+      margin-left: 20px;
+  }
+}
+
+
+
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  /* Sección de habilidades */
+  #skills {
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  #skills h1 {
+    font-size: 1.5rem;
+    padding: 15px 0 0 20px;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  .skills-left, .skills-right {
+    flex: 1;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .skill-card {
+    width: 80vw; 
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .skill-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .skill-card p {
+    font-size: 0.9rem;
+  }
+
+  /* Sección de contacto */
+  #contact {
+    padding: 30px 15px;
+  }
+
+  #contact h2 {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+  }
+}
+
+/* Responsive para pantallas móviles */
+@media (max-width: 480px) {
+  /* Sección de habilidades */
+  #skills {
+    padding: 15px;
+  }
+
+  #skills h1 {
+    font-size: 1.3rem;
+    padding: 10px 0 0 15px;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .skills-left, .skills-right {
+    flex: 1;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .skill-card {
+    width: 90vw; 
+    padding: 8px;
+  }
+
+  .skill-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .skill-card p {
+    font-size: 0.8rem;
+  }
+
+  /* Sección de contacto */
+  #contact {
+    padding: 20px;
+  }
+
+  #contact h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  /* Sección de proyectos */
+  #project {
+    margin-top: 40px;
+  }
+
+  .project-container {
+    flex-direction: column; 
+    margin: 10vh 10px;
+    padding: 0 10px;
+  }
+
+  #project h1 {
+    font-size: 1.8rem; 
+    padding: 15px 0 0 20px;
+  }
+
+  .card {
+    width: 90vw; 
+    height: auto;
+    margin: 10px 0;
+  }
+
+  .card-title {
+    font-size: 1.2em;
+  }
+
+  .small-desc {
+    font-size: 0.9em; 
+  }
+
+  .go-corner {
+    width: 2em;
+    height: 2em;
+  }
+
+  .go-arrow {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive para pantallas móviles */
+@media (max-width: 480px) {
+  /* Sección de proyectos */
+  #project {
+    margin-top: 30px;
+  }
+
+  .project-container {
+    flex-direction: column;
+    margin: 5vh 5px;
+  }
+
+  #project h1 {
+    font-size: 1.5rem;
+    padding: 10px 0 0 15px;
+  }
+
+  .card {
+    width: 100vw; 
+    margin: 5px 0;
+    height: auto;
+  }
+
+  .card-title {
+    font-size: 1em; 
+  }
+
+  .small-desc {
+    font-size: 0.8em; 
+  }
+
+  .go-corner {
+    width: 2em;
+    height: 2em;
+  }
+
+  .go-arrow {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  /* Sección de contacto */
+  #contact {
+    height: auto; 
+    margin-top: 40px;
+  }
+
+  #contact h1 {
+    font-size: 1.8rem; 
+    padding: 15px 0 0 20px;
+  }
+
+  #contact p {
+    font-size: 1rem; 
+    margin-top: 60px;
+  }
+
+  .form-container {
+    height: auto;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  form {
+    padding: 15px;
+    width: 90%; 
+  }
+
+  .form-group input, .form-group textarea {
+    height: 50px; 
+    padding: 0.6em;
+  }
+
+  button {
+    padding: 12px 18px;
+    height: 45px;
+    font-size: 1rem;
+  }
+}
+
+/* Responsive para pantallas móviles */
+@media (max-width: 480px) {
+  /* Sección de contacto */
+  #contact {
+    height: auto;
+    margin-top: 30px;
+  }
+
+  #contact h1 {
+    font-size: 1.5rem; 
+    padding: 10px 0 0 15px;
+  }
+
+  #contact p {
+    font-size: 0.9rem; 
+    margin-top: 50px;
+  }
+
+  .form-container {
+    height: auto;
+    padding: 15px;
+  }
+
+  form {
+    padding: 10px;
+    width: 100%; 
+  }
+  .form-group input, .form-group textarea {
+    height: 45px; 
+    padding: 0.5em;
+  }
+
+  button {
+    padding: 10px 15px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 15px; /* Ajusta el padding en pantallas más pequeñas */
+    height: 50px; /* Ajuste en altura */
+  }
+
+  .logo {
+    padding: 0 20px;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Fuera de la pantalla */
+    width: 60%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo más oscuro */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: right 0.3s ease-in-out;
+  }
+
+  .navbar.active {
+    right: 0; /* Muestra el menú */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Coloca los enlaces en columna */
+    gap: 15px;
+  }
+
+  .hamburger {
+    display: flex; /* Muestra el botón en móviles */
+    z-index: 1001; /* Asegura que esté sobre el menú */
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0; /* Esconde la barra del medio */
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .nav-links li a {
+    font-size: 1.2rem; /* Aumenta el tamaño del texto para ser más legible */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    width: 80%; /* Aumenta el ancho para pantallas aún más pequeñas */
+  }
+
+  .nav-links {
+    gap: 10px; /* Reduce el espacio entre los enlaces */
+  }
+
+  .hamburger {
+    padding: 10px; /* Espaciado para el icono de la hamburguesa */
+  }
+
+  .logo img {
+    width: 50px; /* Ajuste del tamaño del logo en pantallas pequeñas */
+  }
+}

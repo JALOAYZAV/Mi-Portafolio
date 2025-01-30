@@ -7,6 +7,8 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 50px; 
+
 }  
 
 body {
@@ -17,8 +19,10 @@ body {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
+    
 }
 
+<<<<<<< HEAD
 #main-container {
   display: grid;
   grid-template-columns: 1fr;  /* Una columna para organizar las secciones */
@@ -100,3 +104,8 @@ p {
     transform: translateX(0);
   }
 }
+=======
+h1{
+    text-transform: uppercase;
+}
+>>>>>>> 2680b9124e989117ccec5d727c97ea89ce123565

@@ -1,79 +1,60 @@
-/* Estilos generales para la sección "Sobre Mí" */
 #about {
-  background-color: rgba(255, 255, 255, 1) ; /* Blanco */
-  padding: 100px 200px;
-  margin: 200px auto;
-  width: auto;
-  height: 600px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  
+    background-color: rgba(255, 255, 255, 1);
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
 }
 
-/* Título de la sección */
-#about h2 {
-  font-size: 2.2rem;
-  color: var(--color-titulo); /* Dorado */
-  margin-bottom: 20px;
-  text-align: center;
-  font-weight: 700;
+.section-title {
+    width: 100vw;
+    height: 80%; /* Puedes ajustar esta altura según necesites */
+    color: #ffffff;
+    padding: 2% 0 0 2%;    
+    margin-bottom: 20px;
+    background-color: rgb(0, 0, 0); /* Opcional: Fondo del título */
 }
 
-.about-content{
-  background-color: #ffffff; /* Fondo base */
-  border-radius: 15px; /* Bordes redondeados */
-  padding: 50px;
-  box-shadow: 
-    inset 10px 10px 30px rgba(0, 0, 0, 0.2), /* Sombra oscura hacia adentro */
-    inset -10px -10px 30px rgba(255, 255, 255, 0.7); /* Sombra clara hacia adentro */
-  box-shadow: 
-    inset -10px -10px 30px rgba(0, 0, 0, 0.2), /* Sombra oscura hacia adentro */
-    inset 10px 10px 30px rgba(255, 255, 255, 0.7); /* Sombra clara hacia adentro */ 
-  text-align: center; /* Centra el contenido */
-  transition: all 0.3s ease; /* Animación suave */
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(80vh - 140px); 
 
 }
 
-.about-content:hover {
-  padding: 50px;
-  box-shadow: 
-  inset 5px 5px 15px rgba(0, 0, 0, 0.3), /* Sombras más suaves al pasar el mouse */
-  inset -5px -5px 15px rgba(255, 255, 255, 0.8);
-  box-shadow:
-  inset 5px 5px 15px rgba(0, 0, 0, 0.3), /* Sombras más suaves al pasar el mouse */
-  inset -5px -5px 15px rgba(255, 255, 255, 0.8);
-  transform: scale(1.02); /* Ligeramente más grande */
-
-  }
-  
-
-
-/* Párrafos dentro de la sección */
-#about p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: var(--color-texto); /* Gris oscuro */
-  margin-bottom: 20px;
-  text-align: justify;
+.about-container .text-section {
+    flex: 2; /* Mayor espacio para la sección de texto */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 50%; /* Reduce el ancho máximo de la sección de texto */
+    padding: 10px;
+    position: relative;
+    left: 300px;
 }
 
-/* Estilos para los elementos destacados dentro de los párrafos */
-#about strong {
-  font-weight: 600;
-  color: var(--color-enlace); /* Azul brillante */
+.image-stack {
+    flex: 1; /* Mayor espacio para la sección de texto */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1px;
+    margin: 0 50px 0;    
+    position: relative;
+    right: 500px;
+
 }
 
-/* Respuesta para pantallas pequeñas */
-@media (max-width: 768px) {
-  #about {
-    padding: 20px 10px;
-  }
+.about-text {
+    text-align: left;
+    margin: 20px;
+    padding-left: 15%;
+}
 
-  #about h2 {
-    font-size: 1.8rem;
-  }
-
-  #about p {
-    font-size: 1rem;
-  }
+.image-stack .form-image {
+    width: 100%;
+    margin:  0;
 }
