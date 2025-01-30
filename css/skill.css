@@ -1,19 +1,73 @@
-
-#skill {
-    background-color: var(--color-fondo-secundario); 
-    width: auto;
-    height: 100vh;
-    margin: 50px 0 0 0;
+/* Sección de habilidades */
+#skills {
+  background-color: var(--color-fondo-secundario);
+  width: 100vw;
+  height: 100vh;
+  margin-top: 50px;
 }
 
-#skill h1{
-  background-color: rgb(31, 28, 28) ; 
-  color: aliceblue;
-  width: 100vw;
-  padding: 100px 0 0 50px;
+#skills h1 {
+  background-color: rgb(31, 28, 28); 
+  color: white;
+  font-size: 2rem;
+  height: 70px;
+  padding: 20px 0 0 50px
 }
 
-#skill main{
-  width: 100vw;
-  padding: 100px 0 0 50px;
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 50px;
+  border: red solid;
+}
+
+.skills-left, .skills-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  border: blue solid;
+}
+
+.skill-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  width: 30vw;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border: solid yellow;
+  list-style: none;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+}
+
+.skill-card h3 {
+  font-size: 1.6rem;
+  color: var(--color-enlace);
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  font-size: 1rem;
+  color: var(--color-texto);
+  text-decoration: none;
+}
+
+/* Sección de contacto */
+#contact {
+  background-color: var(--color-fondo-secundario);
+  padding: 50px 0;
+}
+
+#contact h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--color-titulo);
 }

@@ -10,26 +10,93 @@
 #about h1 {
   background-color: rgb(31, 28, 28) ; 
   color: aliceblue;
+  font-size: 2em;
   width: 100vw;
-  padding: 100px 0px 0 50px;
+  padding: 30px 0px 0 50px;
 }
 
 .about-container {
   position: relative;
   top: 90px;
-  left: 50px;
+  left: 100px;
   padding:  60px 80px ;
   width: 50%;
   text-align: justify;
   width: 50vw;
   height: 50vh;
-  border-radius: 53px;
-  background: #e0e0e0;
-  box-shadow:  34px 34px 44px #6e6e6e,
-            -34px -34px 44px #ffffff;
+  border-radius: 33px;
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow:  25px 25px 9px #a1a1a1,
+               -25px -25px 9px #ffffff;
+}
 
+.about-container:hover{
+  border: 2px rgba(255, 255, 255, 0);
+
+               background: border-radius(145deg, #f0f0f0, #cacaca);
+  box-shadow: inset 25px 25px 9px #a1a1a1,
+              inset -20px -20px 9px #ffffff;
 }
 
 .about-container .about-text{
   margin-bottom: 25px;
+}
+
+.image-stack {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    left: 60vw;
+    bottom: 30vh;
+    border: #898989;
+    border-radius: 33px;
+background: linear-gradient(145deg, #cacaca, #f0f0f0);
+box-shadow:  29px 29px 32px #898989,
+             -29px -29px 32px #ffffff;
+
+}
+
+.image-stack img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: slide 16s infinite;
+}
+
+.image-stack img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.image-stack img:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.image-stack img:nth-child(3) {
+    animation-delay: 8s;
+}
+
+.image-stack img:nth-child(4) {
+    animation-delay: 12s;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 1;
+    }
+    45% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }

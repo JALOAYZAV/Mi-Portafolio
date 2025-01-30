@@ -1,22 +1,28 @@
 /* Estilo minimalista para la sección de Contacto */
 #contact {
     background-color: var(--color-fondo-secundario); 
-    width: auto;
+    width: 100vw;
     height: 100vh;
-    margin: 50px 0 50px 0;
+    position: relative;  
+    margin-top: 50px;
   }
   
   #contact h1 {
     background-color: rgb(31, 28, 28) ; 
     color: aliceblue;
     width: 100vw;
-    padding: 100px 0 0 50px;
+    padding: 50px 0 0 50px;
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
   }
   
   #contact p {
     font-size: 1.1em;
     color: #555;
-    margin-top: 30px;
+    margin-top: 50px;
     text-align: center;
 }
 
@@ -31,7 +37,7 @@
   padding: 20px;
   box-sizing: border-box; /* Incluye padding en el tamaño total */
   position: relative;
-  bottom: 20vh;
+  bottom: 10vh;
 }
 
 form {
