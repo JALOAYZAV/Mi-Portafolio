@@ -2,7 +2,7 @@
 #contact {
     background-color: var(--color-fondo-secundario); 
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     position: relative;  
     margin-top: 50px;
   }
@@ -11,7 +11,7 @@
     background-color: rgb(31, 28, 28) ; 
     color: aliceblue;
     width: 100vw;
-    padding: 50px 0 0 50px;
+    padding: 20px 0 0 50px;
     font-size: 2rem;
     position: absolute;
     top: 0;
@@ -22,7 +22,7 @@
   #contact p {
     font-size: 1.1em;
     color: #555;
-    margin-top: 50px;
+    margin-top: 100px;
     text-align: center;
 }
 
@@ -67,11 +67,16 @@ form {
   background-color: transparent;
   height: 75px;
   width: 100%;
-  border-radius: 25px;
-background: #ffffff;
-box-shadow: inset 11px 11px 22px #8f8f8f,
-            inset -11px -11px 22px #ffffff;
+  background: linear-gradient(145deg, #FFFFFF, #C1C3C6);
+  border-radius: 20px;
+  box-shadow: 18.32px 18.32px 11px #CBCDD1, -18.32px -18.32px 11px #FFFFFF;
 }
+
+.form-group input:hover, .form-group textarea:hover{
+  transform: translateY(-10px);
+  
+}
+
 
 
 .form-group label {
