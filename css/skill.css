@@ -1,4 +1,3 @@
-/* Sección de habilidades */
 #skills {
   background-color: var(--color-fondo-secundario);
   width: 100vw;
@@ -63,7 +62,6 @@
   text-decoration: none;
 }
 
-/* Sección de contacto */
 #contact {
   background-color: var(--color-fondo-secundario);
   padding: 50px 0;

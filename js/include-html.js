@@ -28,14 +28,3 @@ function includeHTML() {
   includeHTML();
 
 
-  const images = document.querySelectorAll('.image-stack img');
-let currentImageIndex = 0;
-
-function changeImage() {
-    images[currentImageIndex].style.opacity = 0; // Oculta la imagen actual
-    currentImageIndex = (currentImageIndex + 1) % images.length; // Cambia al siguiente índice
-    images[currentImageIndex].style.opacity = 1; // Muestra la nueva imagen
-}
-
-// Cambia la imagen cada 3 segundos
-setInterval(changeImage, 3000);
